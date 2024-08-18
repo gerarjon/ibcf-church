@@ -73,7 +73,7 @@ export default function Navbar() {
                     aria-current={isActive ? 'page' : undefined}
                     className={classNames(
                       isHomePage && !isScrolled ? 'text-white' : 'text-black', //White on homepage, black on other pages
-                      isActive ? 'bg-gray-900 text-white' : 'hover:bg-subtitle hover:text-white',
+                      isActive ? 'bg-gray-900 text-white' : 'transition duration-200 ease-out hover:bg-subtitle hover:text-white hover:ease-in',
                       'rounded-md px-3 py-2 font-semibold',
                   )}
                   >

@@ -24,6 +24,9 @@ module.exports = {
         'subtitle' : '#FF6B35',
         'title' : '#281503',
         'light-orange' : '#FCAB64',
+        'mint' : '#A1FCDF',
+        'brown' : '#7B3D07',
+        'gray-other' : '#4D4D4D',
       }
     },
   },
