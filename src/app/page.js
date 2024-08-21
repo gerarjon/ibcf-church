@@ -4,13 +4,13 @@ export default function Home() {
     <main>
 
       {/* Hero */}
-      <section className="bg-home-image bg-cover bg-bottom mx-auto flex flex-col items-center justify-items-center place-content-center h-svh">
+      <section className="hero-image mx-auto flex flex-col items-center justify-items-center place-content-center h-svh">
         <div className="text-center mt-20 lg:mt-40 mb-6">
           <div className="text-subtitle text-xl lg:text-3xl font-black">
             Welcome to
           </div>
           <h1 className="flex flex-col text-5xl lg:text-9xl font-black italic uppercase text-white tracking-tighter">
-            International <span className="not-italic -my-3 lg:-my-9">Bible Christian</span> Fellowship
+            International <span className="not-italic -my-4 lg:-my-10">Bible Christian</span> Fellowship
           </h1>
         </div>
 
