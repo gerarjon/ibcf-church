@@ -17,7 +17,7 @@ const Footer = () => {
                         <p>info@churchemail.com</p>
                     </div>
                     <div id="socmed-icons" className="flex space-x-2">
-                        <a href="#">youtube</a><a href="#">ig</a><a href='#'>fb</a>
+                        <a href="#">youtube</a><a href='#'>fb</a>
                     </div>
                 </div>
                 <div id="quick-links">

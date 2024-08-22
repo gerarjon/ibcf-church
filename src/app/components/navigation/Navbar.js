@@ -38,7 +38,7 @@ export default function Navbar() {
   }, []);
 
   return(
-    <nav className={`fixed w-screen transition-colors duration-300 ${isScrolled || !isHomePage ? 'bg-main text-black' : 'bg-transparent text-white'}`}>
+    <nav className={`fixed z-50 w-screen transition-colors duration-300 ${isScrolled || !isHomePage ? 'bg-main text-black' : 'bg-transparent text-white'}`}>
       <div className='container mx-auto my-4 flex items-center md:justify-between '>
 
         {/* Logo */}
