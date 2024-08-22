@@ -40,9 +40,9 @@ export default function Home() {
       </section>
 
       <section className="container mx-auto p-10 m-5">
-        <div className="flex flex-col md:flex-row p-5 gap-y-20 justify-around">
+        <div className="flex flex-col lg:flex-row p-5 gap-y-20 justify-around">
           <div className="md:basis-1/2 relative">
-            <div className="relative mx-auto w-80 h-80 md:w-[31rem] md:h-96 overflow-hidden">
+            <div className="relative mx-auto w-80 h-80 md:w-[31rem] md:h-96 overflow-hidden shadow-md">
               <Image 
                 src="https://res.cloudinary.com/ibcf/image/upload/v1723851920/IMG_0040_fmjzkk.jpg"
                 fill={true}
@@ -51,8 +51,8 @@ export default function Home() {
                 className=""
               />
           </div>
-            <div className="absolute inset-x-0 -bottom-9">
-              <p className="max-w-fit mx-auto bg-mint border-none rounded-3xl p-5 lg:text-2xl font-bold uppercase">Come worship with us!</p>
+            <div className="absolute inset-x-0 -bottom-7">
+              <p className="shadow-md max-w-fit mx-auto bg-mint border-none rounded-3xl p-5 lg:text-3xl font-bold uppercase ">Come worship with us</p>
             </div>
           </div>
 
@@ -60,11 +60,53 @@ export default function Home() {
             <p>We are glad that you checked us here! Whatever is your race, the color of your skin, the language that you speak, or the accent that you have, you are very much welcome here.</p>
             <p>If you come and join us in our worship, you don't have to wory about the clothes that you will wear (as long as you are covered) or whether you know how to sing.</p>
 
-            <button className="max-w-fit mx-auto border-2 border-black rounded-full h-10 px-5 bg-white text-black uppercase italic">
-              <Link href="/about-us">Learn more</Link>
+            <button className="max-w-fit mx-auto border-2 border-black rounded-full h-10 px-5 bg-white text-black text-sm uppercase italic">
+              <Link href="/new-here">Learn more</Link>
             </button>
           </div>
         </div>
+      </section>
+
+      <section className="container mx-auto p-10 m-5">
+        <div className="flex flex-col lg:flex-row-reverse p-5 gap-y-20 justify-around">
+          <div className="md:basis-1/2 relative">
+            <div className="relative mx-auto w-80 h-80 md:w-[31rem] md:h-[30rem] overflow-hidden shadow-md">
+              <Image 
+                src="https://res.cloudinary.com/ibcf/image/upload/v1723851926/IMG_0055_pzseqn.jpg"
+                fill={true}
+                alt="Picture of group worship"
+                objectFit="cover"
+                className=""
+              />
+          </div>
+            <div className="absolute inset-x-0 -bottom-7">
+              <p className="shadow-md max-w-fit mx-auto bg-mint border-none rounded-3xl p-5 lg:text-3xl font-bold uppercase ">Our Values</p>
+            </div>
+          </div>
+
+          <div className="md:basis-1/2 flex flex-col md:px-16 gap-y-14 justify-center">
+            <div>
+              <p><strong>Our mission</strong> is to reach out to people from different races, languages, and ethincities with the love of God and lead them to become devoted followers of Christ.</p>
+              <ul className="list-disc pl-7 pt-3">
+                <li>Matthew 28:18-20</li>
+              </ul>
+            </div>
+            <div>
+              <p><strong>Our vision</strong> is to see people from different nations, tribes, and languages serving and worshipping Jesus Christ in this church.</p>
+              <ul className="list-disc pl-7 pt-3">
+                <li>Revelation 7:9</li>
+              </ul>
+            </div>
+
+            <button className="max-w-fit mx-auto border-2 border-black rounded-full h-10 px-5 bg-white text-black text-sm uppercase italic">
+              <Link href="/about-us">About Us</Link>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        
       </section>
     </main>
   )
