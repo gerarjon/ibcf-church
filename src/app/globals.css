@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: #fff;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.hero-image { 
+  z-index: -3;
+  object-fit: cover;
 }
-
-.hero-image {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url('https://res.cloudinary.com/ibcf/image/upload/v1723866139/IMG_0430-2_n8xsq5.jpg');
-  background-size: cover;
-  background-position: center;
+.gradiantBackground {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.600), rgba(0, 0, 0, 0));
+  z-index: -1;
 }

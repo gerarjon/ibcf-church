@@ -39,7 +39,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <hr className="h-px w-[29rem] md:w-[35rem] mx-auto my-8 bg-black border-0" />
+            <hr className="h-px w-[20rem] md:w-[35rem] mx-auto my-8 bg-black border-0" />
 
             <p className="text-gray-other">&copy;2024 International Bible Christian Fellowship</p>
 
