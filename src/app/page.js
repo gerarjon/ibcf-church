@@ -64,7 +64,7 @@ export default function Home() {
           <h3 className="uppercase text-xl lg:text-4xl font-black tracking-tight">
             Join us live or in person
           </h3>
-          <p className="font-black">
+          <p className="font-bold">
             Sundays at 10:30am
           </p>
           <div className="flex space-x-4 text-xs justify-center pt-2">
@@ -77,7 +77,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="text-white m-4 font-black text-lg">
+        <div className="text-white m-4 font-bold text-lg">
           <p>5823 176th St SW Lynnwood, WA 98037</p>
         </div>
       </section>
@@ -87,7 +87,7 @@ export default function Home() {
       <section className="container mx-auto p-10 lg:py-16 m-5">
         <div className="flex flex-col lg:flex-row p-5 gap-y-20 justify-around">
           <div className="md:basis-1/2 relative">
-            <div className="relative mx-auto w-80 h-80 md:w-[31rem] md:h-96 overflow-hidden shadow-md">
+            <div className="relative mx-auto w-68 h-72 md:w-[31rem] md:h-96 overflow-hidden shadow-md">
               <Image 
                 src="https://res.cloudinary.com/ibcf/image/upload/v1723851920/IMG_0040_fmjzkk.jpg"
                 fill={true}
@@ -116,7 +116,7 @@ export default function Home() {
       <section className="container mx-auto p-10 lg:py-16 m-5">
         <div className="flex flex-col lg:flex-row-reverse p-5 gap-y-20 justify-around">
           <div className="md:basis-1/2 relative">
-            <div className="relative mx-auto w-80 h-80 md:w-[31rem] md:h-[30rem] overflow-hidden shadow-md">
+            <div className="relative mx-auto w-68 h-72 md:w-[31rem] md:h-[30rem] overflow-hidden shadow-md">
               <Image 
                 src="https://res.cloudinary.com/ibcf/image/upload/v1723851926/IMG_0055_pzseqn.jpg"
                 fill={true}
@@ -161,29 +161,29 @@ export default function Home() {
 
           <div className="border rounded-lg md:flex bg-white w-full">
             {
-            latestVideo ? 
-            <>
-              <iframe 
-                src={`https://www.youtube.com/embed/${latestVideo.resourceId.videoId}`}
-                title="YouTube video player"
-                frameorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen="allowfullscreen"
-                loading="lazy"
-                className="w-full lg:w-3/4 min-h-96 border rounded-lg"
-                >
-              </iframe>
-              <div className="px-3 py-12 space-y-5">
-                <h2 className="text-lg lg:text-2xl text-subtitle font-bold">{latestVideo.title}</h2>
-                <p>Pastor Doods Sente</p>
-                <p>{formatDate(latestVideo.publishedAt)}</p>
+              latestVideo ? 
+              <>
+                <iframe 
+                  src={`https://www.youtube.com/embed/${latestVideo.resourceId.videoId}`}
+                  title="YouTube video player"
+                  frameorder="0"
+                  allow="web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen="allowfullscreen"
+                  loading="lazy"
+                  className="w-full aspect-video border rounded-lg"
+                  >
+                </iframe>
+                <div className="px-3 py-4 lg:py-12 space-y-3 lg:space-y-5">
+                  <h2 className="text-lg lg:text-2xl text-subtitle font-bold">{latestVideo.title}</h2>
+                  <p>Pastor Doods Sente</p>
+                  <p>{formatDate(latestVideo.publishedAt)}</p>
+                </div>
+              </>
+              :
+              <div className="mx-auto">
+                <p className="text-2xl text-black">Loading Video...</p>
               </div>
-            </>
-            :
-            <div className="mx-auto min-h-96">
-              <p className="text-2xl text-black">Loading Video...</p>
-            </div>
             }
             
           </div>
