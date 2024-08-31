@@ -1,7 +1,41 @@
+"use client"
+
 import Image from 'next/image'
 import Link from "next/link"
+import React, { useEffect, useState } from "react"
 
 export default function Home() {
+  const [latestVideo, setLatestVideo] = useState(null);
+
+  useEffect(() => {
+    const fetchLatestVideo = async () => {
+      const API_KEY = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY;
+      const CHANNEL_ID = "UCtVUdili7_2g6h-tz_JTsQg";
+
+      // Fetch uploads playlist ID
+      const channelUrl = `https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=${CHANNEL_ID}&key=${API_KEY}`;
+      const channelResponse = await fetch(channelUrl);
+      const channelData = await channelResponse.json();
+      const uploadsPlaylistId = channelData.items[0].contentDetails.relatedPlaylists.uploads;
+
+      // Fetch latest video from uploads playlist
+      const videoUrl = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${uploadsPlaylistId}&maxResults=1&key=${API_KEY}`;
+      const videoResponse = await fetch(videoUrl);
+      const videoData = await videoResponse.json();
+      setLatestVideo(videoData.items[0].snippet);
+    };
+
+    fetchLatestVideo();
+  }, []);
+
+  const formatDate = (publishedAt) => {
+    const date = new Date(publishedAt);
+    return new Intl.DateTimeFormat('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    }).format(date);
+  };
 
   return (
     <main>
@@ -126,22 +160,32 @@ export default function Home() {
           </Link>
 
           <div className="border rounded-lg md:flex bg-white w-full">
-            <iframe 
-              src="https://www.youtube.com/embed/v1IVQM5DCuY?si=gmuh91bvpSxZtyz-"
-              title="YouTube video player"
-              frameorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen="allowfullscreen"
-              loading="lazy"
-              className="w-full lg:w-3/4 min-h-96 border rounded-lg"
-              >
-            </iframe>
-            <div className="px-3 py-12 space-y-5">
-              <h2 className="text-lg lg:text-2xl text-subtitle font-bold">EVERY FATHER'S NUMBER ONE ENEMY #1 - FATHER'S DAY SERMON</h2>
-              <p>Pastor Doods Sente</p>
-              <p>July 22, 2024</p>
+            {
+            latestVideo ? 
+            <>
+              <iframe 
+                src={`https://www.youtube.com/embed/${latestVideo.resourceId.videoId}`}
+                title="YouTube video player"
+                frameorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen="allowfullscreen"
+                loading="lazy"
+                className="w-full lg:w-3/4 min-h-96 border rounded-lg"
+                >
+              </iframe>
+              <div className="px-3 py-12 space-y-5">
+                <h2 className="text-lg lg:text-2xl text-subtitle font-bold">{latestVideo.title}</h2>
+                <p>Pastor Doods Sente</p>
+                <p>{formatDate(latestVideo.publishedAt)}</p>
+              </div>
+            </>
+            :
+            <div className="mx-auto min-h-96">
+              <p className="text-2xl text-black">Loading Video...</p>
             </div>
+            }
+            
           </div>
         </div>
       </section>
