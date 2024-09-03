@@ -103,7 +103,7 @@ export default function Home() {
 
           <div className="md:basis-1/2 flex flex-col md:px-16 gap-y-14 justify-center">
             <p>We are glad that you checked us here! Whatever is your race, the color of your skin, the language that you speak, or the accent that you have, you are very much welcome here.</p>
-            <p>If you come and join us in our worship, you don't have to wory about the clothes that you will wear (as long as you are covered) or whether you know how to sing.</p>
+            <p>If you come and join us in our worship, you don&apos;t have to wory about the clothes that you will wear (as long as you are covered) or whether you know how to sing.</p>
 
             <button className="max-w-fit mx-auto border-2 border-black rounded-full h-10 px-5 bg-white text-black text-sm uppercase italic">
               <Link href="/new-here">Learn more</Link>
