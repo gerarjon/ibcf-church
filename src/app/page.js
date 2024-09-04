@@ -41,7 +41,7 @@ export default function Home() {
     <main>
 
       {/* Hero */}
-      <section className="mx-auto flex flex-col items-center justify-items-center place-content-center h-svh">
+      <section className="mx-auto relative flex flex-col items-center justify-items-center place-content-center h-svh">
         <div className="gradiantBackground"></div>
         <Image
           src="https://res.cloudinary.com/ibcf/image/upload/v1723866139/IMG_0430-2_n8xsq5.jpg"
