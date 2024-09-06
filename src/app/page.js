@@ -51,7 +51,7 @@ export default function Home() {
           fill
           className="hero-image"
         />
-        <div className="text-center mt-20 lg:mt-40 mb-6">
+        <div className="text-center mt-10 lg:mt-40 mb-6">
           <div className="text-subtitle text-xl lg:text-3xl font-black">
             Welcome to
           </div>
@@ -61,10 +61,10 @@ export default function Home() {
         </div>
 
         <div className="text-center text-white m-8">
-          <h3 className="uppercase text-xl lg:text-4xl font-black tracking-tight">
+          <h3 className="uppercase text-lg lg:text-4xl font-black tracking-tight">
             Join us live or in person
           </h3>
-          <p className="font-bold">
+          <p className="text-sm font-bold">
             Sundays at 10:30am
           </p>
           <div className="flex space-x-4 text-xs justify-center pt-2">
@@ -77,7 +77,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="text-white m-4 font-bold text-lg">
+        <div className="text-md lg:text-lg text-white m-4 font-bold">
           <p>5823 176th St SW Lynnwood, WA 98037</p>
         </div>
       </section>
@@ -101,7 +101,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="md:basis-1/2 flex flex-col md:px-16 gap-y-14 justify-center">
+          <div className="md:basis-1/2 flex flex-col md:px-16 gap-y-14 justify-center leading-relaxed">
             <p>We are glad that you checked us here! Whatever is your race, the color of your skin, the language that you speak, or the accent that you have, you are very much welcome here.</p>
             <p>If you come and join us in our worship, you don&apos;t have to wory about the clothes that you will wear (as long as you are covered) or whether you know how to sing.</p>
 
@@ -129,7 +129,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="md:basis-1/2 flex flex-col md:px-16 gap-y-14 justify-center">
+          <div className="md:basis-1/2 flex flex-col md:px-16 gap-y-14 justify-center leading-relaxed">
             <div>
               <p><strong>Our mission</strong> is to reach out to people from different races, languages, and ethincities with the love of God and lead them to become devoted followers of Christ.</p>
               <ul className="list-disc pl-7 pt-3">
