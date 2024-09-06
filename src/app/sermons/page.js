@@ -45,8 +45,8 @@ export default function Sermons() {
   return (
     <main className="pt-20">
       <section className="mx-auto container px-5 m-5">
-          <h3 className="text-xl lg:text-3xl font-black text-subtitle">Sermons</h3>
-          <h1 className="flex flex-col text-7xl lg:text-8xl font-black uppercase tracking-tighter text-title">Watch <span className="italic -my-6 lg:-my-7">Our</span> Sermons</h1>
+          <h3 className="text-lg lg:text-3xl font-black text-subtitle">Sermons</h3>
+          <h1 className="flex flex-col text-4xl lg:text-7xl font-black uppercase tracking-tighter text-title">Watch <span className="italic -my-3 lg:-my-5">Our</span> Sermons</h1>
 
           <div className="my-10 text-lg">
               <p>Below is an archive of our most <span className="underline">recent</span> sermons.</p> 
