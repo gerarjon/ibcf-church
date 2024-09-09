@@ -41,7 +41,7 @@ export default function Home() {
     <main>
 
       {/* Hero */}
-      <section className="mx-auto relative flex flex-col items-center justify-items-center place-content-center h-svh">
+      <section className="mx-auto relative flex flex-col items-center justify-items-center place-content-center h-svh lg:h-vh">
         <div className="gradiantBackground"></div>
         <Image
           src="https://res.cloudinary.com/ibcf/image/upload/v1723866139/IMG_0430-2_n8xsq5.jpg"
@@ -55,8 +55,8 @@ export default function Home() {
           <div className="text-subtitle text-xl lg:text-3xl font-black">
             Welcome to
           </div>
-          <h1 className="flex flex-col text-5xl lg:text-9xl font-black italic uppercase text-white tracking-tighter">
-            International <span className="not-italic -my-4 lg:-my-10">Bible Christian</span> Fellowship
+          <h1 className="flex flex-col text-5xl lg:text-8xl font-black italic uppercase text-white tracking-tighter">
+            International <span className="not-italic -my-4 lg:-my-7">Bible Christian</span> Fellowship
           </h1>
         </div>
 
