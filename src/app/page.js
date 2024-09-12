@@ -101,7 +101,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="md:basis-1/2 flex flex-col md:px-16 gap-y-14 justify-center leading-relaxed">
+          <div className="md:basis-1/2 flex flex-col md:px-16 gap-y-14 justify-center text-lg leading-relaxed">
             <p>We are glad that you checked us here! Whatever is your race, the color of your skin, the language that you speak, or the accent that you have, you are very much welcome here.</p>
             <p>If you come and join us in our worship, you don&apos;t have to wory about the clothes that you will wear (as long as you are covered) or whether you know how to sing.</p>
 
@@ -129,7 +129,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="md:basis-1/2 flex flex-col md:px-16 gap-y-14 justify-center leading-relaxed">
+          <div className="md:basis-1/2 flex flex-col md:px-16 gap-y-14 justify-center text-lg leading-relaxed">
             <div>
               <p><strong>Our mission</strong> is to reach out to people from different races, languages, and ethincities with the love of God and lead them to become devoted followers of Christ.</p>
               <ul className="list-disc pl-7 pt-3">
